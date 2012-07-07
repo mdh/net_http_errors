@@ -1,0 +1,40 @@
+= Net::HTTP::Errors
+
+A simple way for catching all errors raised by Net::HTTP.
+
+== Usage
+
+It super easy to use:
+  
+  begin
+    Net::HTTP.some_call
+  rescue *Net::HTTP::Errors => e
+    puts 'uh oh!'
+  end
+
+That's it. 
+
+== Installation
+
+Use gem install:
+
+  gem install net_http_errors
+
+Or put it in your Gemfile:
+
+  gem 'net_http_errors'
+
+== Note on Patches/Pull Requests
+
+* Fork the project.
+* Make your feature addition or bug fix.
+* Add tests for it. This is important so I don't break it in a
+  future version unintentionally.
+* Commit, do not mess with rakefile, version, or history.
+  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
+
+
+== Copyright
+
+Copyright (c) 2012 Marek de Heus. See LICENSE for details.
