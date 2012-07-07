@@ -1,8 +1,3 @@
-# Easy for using in rescue clause, e.g.:
-# rescue *Net::HTTP::Errors => e
-#
-# Inspired by http://tammersaleh.com/posts/rescuing-net-http-exceptions
-# Could be a nice little gem
 require 'net/http'
 
 Net::HTTP.class_eval do

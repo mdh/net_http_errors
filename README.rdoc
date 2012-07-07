@@ -2,6 +2,13 @@
 
 A simple way for catching all errors raised by Net::HTTP.
 
+As you might know, Ruby's Net::HTTP library can raise all kinds of errors, including
+Timeout::Error, EOFError as well as a number of Net::HTTP errors. 
+
+Remembering which errors to rescue from can be a pain. This gem solves that problem.
+
+Inspired by http://tammersaleh.com/posts/rescuing-net-http-exceptions .
+
 == Usage
 
 It super easy to use:
