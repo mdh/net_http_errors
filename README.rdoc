@@ -2,8 +2,11 @@
 
 A simple way for catching all errors raised by Net::HTTP.
 
-As you might know, Ruby's Net::HTTP library can raise all kinds of errors, including
-Timeout::Error, EOFError as well as a number of Net::HTTP errors. 
+As you might know, Ruby's Net::HTTP library can raise all kinds of errors, including:
+
+* Timeout::Error when the request takes too long to complete, 
+* SocketError when the domain name cannot be resolved, 
+* EOFError due to Keep-Alive timeout.
 
 Remembering which errors to rescue from can be a pain. This gem solves that problem.
 
@@ -12,14 +15,17 @@ Inspired by http://tammersaleh.com/posts/rescuing-net-http-exceptions .
 == Usage
 
 It super easy to use:
-  
+
+  require "net/http"
+  require "uri"
+
   begin
-    Net::HTTP.some_call
-  rescue *Net::HTTP::Errors => e
+    Net::HTTP.get_response URI.parse('http://google.com/')
+  rescue *Net::HTTP::Errors
     puts 'uh oh!'
   end
 
-That's it. 
+That's it.
 
 == Installation
 
