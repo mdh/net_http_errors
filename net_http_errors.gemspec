@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'net_http_errors'
-  s.version     = '0.1.0'
+  s.version     = '0.2.0'
   s.date        = '2012-07-07'
   s.summary     = "All Net::HTTP Errors"
   s.description = "Simple gem for catching all Net::HTTP errors"
