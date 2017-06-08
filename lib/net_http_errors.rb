@@ -2,9 +2,9 @@ require 'net/http'
 
 Net::HTTP.class_eval do
   Net::HTTP::Errors = [
-    SocketError, IOError, Timeout::Error, Errno::EINVAL, Errno::ECONNRESET,
-    EOFError, Net::HTTPBadResponse, Net::HTTPHeaderSyntaxError, Errno::ECONNREFUSED,
-    Net::ProtocolError, Errno::ECONNREFUSED
+    EOFError, IOError, SocketError,
+    Errno::ECONNRESET, Errno::ECONNREFUSED, Errno::EINVAL,
+    Net::HTTPBadResponse, Net::HTTPHeaderSyntaxError, Net::ProtocolError,
+    Timeout::Error
   ]
 end
-
